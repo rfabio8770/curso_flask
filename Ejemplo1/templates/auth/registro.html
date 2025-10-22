@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Registrar Uusario {% endblock %}
+
+{% block contenido %}
+<h1>Registro de usuario</h1>
+<form action="" method="post">
+    <label for="username">Nombre de usuario</label>
+    <input type="text" name="username" id="username" required>
+    <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+    <br>
+    <input type="submit" value="Registrar">
+</form>
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+
+{% endblock %}

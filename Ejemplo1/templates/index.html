@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block titulo %} Página Principal {% endblock%}
+{% block contenido %}
+
+<h1>Bienvenido a mi página web</h1>
+{% if nombre %}
+    <p>Hola, {{ nombre | upper }}</p>
+    <ul>
+        {% for lenguaje in lenguajes | reverse %}
+        <li> {{ lenguaje }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Hola, desconocido</p>
+{% endif %}
+<p>La fecha de hoy es {{ fecha | today }}</p>
+<p>La frase repetida es {{ repetir('abc', 4) }} </p>
+{% endblock %}
