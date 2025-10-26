@@ -19,13 +19,24 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
+                    {% if g.user %}
+                        <li class="nav-item">
+                            <span class="nav-link active">{{ g.user.username }}</span>
+                        </li>
+                     <li class="nav-item">
+                        <a class="nav-link"  href="{{url_for('todo.index')}}">Tareas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('auth.logout')}}">Cerrar de sesión</a>
+                    </li>
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link"  href="{{url_for('auth.register')}}">Registrarse</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url_for('auth.login')}}">Inicio de sesión</a>
                     </li>
-                    
+                    {% endif %}
                 </ul>
             </div>
         </div>
