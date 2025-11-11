@@ -1,0 +1,43 @@
+<section class="container p-5" id="portfolio">
+    <h2 class="text-center"> Mis Proyectos </h2>
+    <hr class="mb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="{{ url_for('static', filename = 'img/todo-list.png')}}" alt="Imagen del proyecto To-Do-List"
+                    class="d-block mx-lg-auto img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">Lista de Tareas - Flask</h5>
+                    <p class="card-text">Este proyecto se creó una aplicación Flask para gestionar tareas.</p>
+                    <a href="#" class="nav-link text-primary">Enlace aquí</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="{{ url_for('static', filename = 'img/blog-post.png')}}" alt="Imagen del proyecto To-Do-List"
+                    class="d-block mx-lg-auto img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">BlogPost - Flask</h5>
+                    <p class="card-text">Este proyecto se creó una aplicación Flask para gestionar blogs y usuarios usando
+                        una base de datos en PostgreSQL.</p>
+                    <a href="#" class="nav-link text-primary">Enlace aquí</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="{{ url_for('static', filename = 'img/api-contact.png')}}" alt="Imagen del proyecto To-Do-List"
+                    class="d-block mx-lg-auto img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">API Contactos - Flask</h5>
+                    <p class="card-text">Este proyecto se creó una aplicación de tipo API-REST Flask para gestionar contactos usando
+                        una base de datos en SQLite.</p>
+                    <a href="#" class="nav-link text-primary">Enlace aquí</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
